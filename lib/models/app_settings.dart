@@ -8,10 +8,10 @@ class AppSettings extends HiveObject {
   bool darkMode;
 
   @HiveField(1)
-  String currency; // e.g., 'USD', 'EUR', 'INR'
+  String currency; 
 
   @HiveField(2)
-  String currencySymbol; // e.g., '$', '€', '₹'
+  String currencySymbol; 
 
   @HiveField(3)
   bool notificationsEnabled;
@@ -23,7 +23,7 @@ class AppSettings extends HiveObject {
   String? appLockPin;
 
   @HiveField(6)
-  String language; // 'en', 'es', 'fr', etc.
+  String language; 
 
   @HiveField(7)
   DateTime lastBackupDate;

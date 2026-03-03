@@ -32,7 +32,7 @@ class _CategoryManagementScreenState extends State<CategoryManagementScreen> {
 
             return Column(
               children: [
-                // Type filter
+
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Row(
@@ -61,7 +61,7 @@ class _CategoryManagementScreenState extends State<CategoryManagementScreen> {
                   ),
                 ),
 
-                // Categories list
+
                 Expanded(
                   child: categories.isEmpty
                       ? Center(

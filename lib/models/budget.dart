@@ -17,10 +17,10 @@ class Budget extends HiveObject {
   double amount;
 
   @HiveField(4)
-  String period; // 'monthly' or 'yearly'
+  String period; 
 
   @HiveField(5)
-  int month; // 1-12 for monthly budgets
+  int month; 
 
   @HiveField(6)
   int year;
@@ -32,7 +32,7 @@ class Budget extends HiveObject {
   DateTime updatedAt;
 
   @HiveField(9)
-  bool isGlobal; // true for total monthly budget, false for category-wise
+  bool isGlobal; 
 
   Budget({
     required this.id,

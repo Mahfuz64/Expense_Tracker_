@@ -82,7 +82,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Type selector
+
                   Text(
                     'Type',
                     style: Theme.of(context).textTheme.labelLarge,
@@ -115,7 +115,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Amount
+
                   Text(
                     'Amount',
                     style: Theme.of(context).textTheme.labelLarge,
@@ -136,7 +136,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Category
+
                   Text(
                     'Category',
                     style: Theme.of(context).textTheme.labelLarge,
@@ -175,7 +175,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
                         ),
                   const SizedBox(height: 24),
 
-                  // Date
+
                   Text(
                     'Date',
                     style: Theme.of(context).textTheme.labelLarge,
@@ -212,7 +212,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Time
+
                   Text(
                     'Time',
                     style: Theme.of(context).textTheme.labelLarge,
@@ -247,7 +247,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Note
+
                   Text(
                     'Note (Optional)',
                     style: Theme.of(context).textTheme.labelLarge,
@@ -265,7 +265,7 @@ class _AddEditTransactionScreenState extends State<AddEditTransactionScreen> {
                   ),
                   const SizedBox(height: 32),
 
-                  // Save button
+
                   PrimaryButton(
                     text: widget.transaction == null
                         ? 'Add Transaction'

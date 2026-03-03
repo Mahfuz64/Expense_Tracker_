@@ -85,7 +85,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -104,7 +104,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 const SizedBox(height: 24),
 
-                // Total Balance Card
+
                 Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -140,7 +140,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 const SizedBox(height: 20),
 
-                // Income & Expense Summary
+
                 Row(
                   children: [
                     Expanded(
@@ -166,7 +166,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 const SizedBox(height: 24),
 
-                // Today's Summary
+
                 if (todaysTransactions.isNotEmpty) ...[
                   Text(
                     "Today's Summary",
@@ -211,7 +211,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   const SizedBox(height: 20),
                 ],
 
-                // Spending Insight
+
                 if (transactionProvider.transactions.isNotEmpty) ...[
                   Container(
                     decoration: BoxDecoration(
@@ -238,7 +238,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   const SizedBox(height: 20),
                 ],
 
-                // Recent Transactions
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

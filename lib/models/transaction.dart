@@ -11,7 +11,7 @@ class Transaction extends HiveObject {
   double amount;
 
   @HiveField(2)
-  String type; // 'income' or 'expense'
+  String type; 
 
   @HiveField(3)
   String categoryId;

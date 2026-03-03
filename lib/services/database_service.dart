@@ -28,7 +28,7 @@ class DatabaseService {
   Future<void> init() async {
     await Hive.initFlutter();
     
-    // Register adapters
+
     if (!Hive.isAdapterRegistered(0)) {
       Hive.registerAdapter(CategoryAdapter());
     }
@@ -42,24 +42,24 @@ class DatabaseService {
       Hive.registerAdapter(AppSettingsAdapter());
     }
 
-    // Open boxes
+
     _transactionsBox = await Hive.openBox<Transaction>(_transactionsBoxName);
     _categoriesBox = await Hive.openBox<Category>(_categoriesBoxName);
     _budgetsBox = await Hive.openBox<Budget>(_budgetsBoxName);
     _settingsBox = await Hive.openBox<AppSettings>(_settingsBoxName);
 
-    // Initialize default data if empty
+
     await _initializeDefaults();
   }
 
   Future<void> _initializeDefaults() async {
-    // Initialize settings if first time
+
     if (_settingsBox.isEmpty) {
       final settings = AppSettings();
       await _settingsBox.put('app_settings', settings);
     }
 
-    // Initialize default categories if empty
+
     if (_categoriesBox.isEmpty) {
       final defaultCategories = AppConstants.getDefaultCategories();
       for (final category in defaultCategories) {
@@ -68,7 +68,7 @@ class DatabaseService {
     }
   }
 
-  // Transaction operations
+
   Future<void> addTransaction(Transaction transaction) async {
     await _transactionsBox.put(transaction.id, transaction);
   }
@@ -103,7 +103,7 @@ class DatabaseService {
         .toList();
   }
 
-  // Category operations
+
   Future<void> addCategory(Category category) async {
     await _categoriesBox.put(category.id, category);
   }
@@ -132,7 +132,7 @@ class DatabaseService {
     return _categoriesBox.get(categoryId);
   }
 
-  // Budget operations
+
   Future<void> addBudget(Budget budget) async {
     await _budgetsBox.put(budget.id, budget);
   }
@@ -162,7 +162,7 @@ class DatabaseService {
     );
   }
 
-  // Settings operations
+
   AppSettings getSettings() {
     return _settingsBox.get('app_settings') ?? AppSettings();
   }
@@ -171,7 +171,7 @@ class DatabaseService {
     await _settingsBox.put('app_settings', settings);
   }
 
-  // Backup and restore
+
   Future<Map<String, dynamic>> exportData() async {
     return {
       'transactions': _transactionsBox.values.map((t) => t.toJson()).toList(),
@@ -182,7 +182,7 @@ class DatabaseService {
   }
 
   Future<void> importData(Map<String, dynamic> data) async {
-    // Import transactions
+
     if (data['transactions'] is List) {
       for (final txJson in data['transactions']) {
         final transaction = Transaction.fromJson(txJson);
@@ -190,7 +190,7 @@ class DatabaseService {
       }
     }
 
-    // Import categories (skip default ones)
+
     if (data['categories'] is List) {
       for (final catJson in data['categories']) {
         final category = Category.fromJson(catJson);
@@ -200,7 +200,7 @@ class DatabaseService {
       }
     }
 
-    // Import budgets
+
     if (data['budgets'] is List) {
       for (final budgetJson in data['budgets']) {
         final budget = Budget.fromJson(budgetJson);
@@ -208,7 +208,7 @@ class DatabaseService {
       }
     }
 
-    // Import settings
+
     if (data['settings'] is Map) {
       final settings = AppSettings.fromJson(data['settings'] as Map<String, dynamic>);
       await updateSettings(settings);

@@ -21,8 +21,7 @@ class Category extends HiveObject {
   bool isDefault;
 
   @HiveField(5)
-  String type; // 'income' or 'expense'
-
+  String type; 
   Category({
     required this.id,
     required this.name,

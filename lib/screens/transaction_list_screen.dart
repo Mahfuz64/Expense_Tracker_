@@ -29,15 +29,15 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
           builder: (context, transactionProvider, settingsProvider, child) {
             var transactions = transactionProvider.transactions;
 
-            // Filter by type
+
             if (_filterType != 'all') {
               transactions = transactions.where((t) => t.type == _filterType).toList();
             }
 
-            // Sort by date (most recent first)
+
             transactions.sort((a, b) => b.date.compareTo(a.date));
 
-            // Group by date
+
             final grouped = <String, List<dynamic>>{};
             for (final tx in transactions) {
               final dateKey = DateFormatUtil.formatDate(tx.date);
@@ -48,7 +48,7 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
 
             return Column(
               children: [
-                // Filter buttons
+
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Row(
@@ -92,7 +92,7 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
                   ),
                 ),
 
-                // Transactions list
+
                 if (grouped.isEmpty)
                   Expanded(
                     child: Center(

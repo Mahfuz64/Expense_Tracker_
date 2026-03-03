@@ -70,7 +70,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Period selector
+
                   Row(
                     children: [
                       Expanded(
@@ -102,7 +102,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Summary
+
                   Text(
                     'Summary',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -170,7 +170,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Category-wise breakdown
+
                   if (categoryWise.isNotEmpty) ...[
                     Text(
                       'Category-wise Spending',
@@ -263,7 +263,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                     const SizedBox(height: 24),
                   ],
 
-                  // Unusual spending alert
+
                   if (AnalyticsService.getUnusualSpendingAlert(
                         transactionProvider.transactions,
                         categoryProvider.categories,
@@ -288,7 +288,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                     const SizedBox(height: 24),
                   ],
 
-                  // Prediction
+
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.blue[50],

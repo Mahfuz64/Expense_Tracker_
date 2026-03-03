@@ -31,7 +31,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Theme Settings
+
                   _buildSectionTitle('Appearance'),
                   const SizedBox(height: 12),
                   Card(
@@ -45,7 +45,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Currency Settings
+
                   _buildSectionTitle('Currency'),
                   const SizedBox(height: 12),
                   Card(
@@ -84,7 +84,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Notifications
+
                   _buildSectionTitle('Notifications'),
                   const SizedBox(height: 12),
                   Card(
@@ -98,7 +98,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Backup & Restore
+
                   _buildSectionTitle('Data'),
                   const SizedBox(height: 12),
                   Card(
@@ -272,7 +272,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // About
+
                   _buildSectionTitle('About'),
                   const SizedBox(height: 12),
                   Card(

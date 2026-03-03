@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/category.dart';
 
 class AppConstants {
-  // Currency options
+
   static const List<String> currencies = [
     'USD',
     'EUR',
@@ -25,24 +25,24 @@ class AppConstants {
     'BDT': '৳',
   };
 
-  // Language options
+
   static const List<String> languages = ['en', 'es', 'fr', 'de', 'it', 'pt'];
 
-  // Color palette
+
   static const Color primaryColor = Color(0xFF6366F1);
   static const Color secondaryColor = Color(0xFF10B981);
   static const Color accentColor = Color(0xFFF59E0B);
   static const Color dangerColor = Color(0xFFEF4444);
   static const Color successColor = Color(0xFF10B981);
 
-  // Budget warning thresholds
+
   static const double budgetWarningThreshold = 0.8; // 80%
   static const double budgetCriticalThreshold = 1.0; // 100%
 
-  // Default categories
+
   static List<Category> getDefaultCategories() {
     return [
-      // Expense categories
+
       Category(
         id: 'food',
         name: 'Food & Dining',
@@ -99,7 +99,7 @@ class AppConstants {
         isDefault: true,
         type: 'expense',
       ),
-      // Income categories
+
       Category(
         id: 'salary',
         name: 'Salary',

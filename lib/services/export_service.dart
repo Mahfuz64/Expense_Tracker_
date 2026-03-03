@@ -67,7 +67,7 @@ class ExportService {
     buffer.writeln('Net Balance: \$${(totalIncome - totalExpense).toStringAsFixed(2)}');
     buffer.writeln('');
 
-    // Category-wise breakdown
+
     buffer.writeln('Category Breakdown:');
     final categoryWise = <String, double>{};
     for (final tx in filtered) {

@@ -50,7 +50,7 @@ class _BudgetManagementScreenState extends State<BudgetManagementScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Month navigation
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -84,7 +84,7 @@ class _BudgetManagementScreenState extends State<BudgetManagementScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Add budget button
+
                   PrimaryButton(
                     text: 'Add Budget',
                     onPressed: () {
@@ -97,7 +97,7 @@ class _BudgetManagementScreenState extends State<BudgetManagementScreen> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Budgets list
+
                   if (budgets.isEmpty)
                     Center(
                       child: Column(
